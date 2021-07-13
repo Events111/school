@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+    </tr>
+<!--    <tr th:each="user : ${userList}">-->
+<!--        <td th:text="${user.id}"></td>-->
+<!--        <td th:text="${user.name}"></td>-->
+<!--        <td th:text="${user.age}"></td>-->
+<!--    </tr>-->
+    </br>
+   <!-- <span th:text="${msg}" />-->
+
+
+        <span th:text="${#strings.replace(msg,'</br>','<br>')}"></span>
+
+</table>
+</body>
+</html>

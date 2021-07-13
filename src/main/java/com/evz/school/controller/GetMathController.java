@@ -24,4 +24,14 @@ public class GetMathController {
         String s = mng.print2File();
         return s;
     }
+
+    @RequestMapping("/get2")
+    public ModelAndView addMath(){
+        ModelAndView mav=new ModelAndView();
+        MathNumGame mng = new MathNumGame();
+        String s = mng.print2File();
+        mav.addObject("msg",s);
+        mav.setViewName("exam.html");
+        return mav;
+    }
 }

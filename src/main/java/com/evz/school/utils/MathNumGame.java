@@ -168,7 +168,7 @@ public class MathNumGame {
         List<String> totalList = new ArrayList<String>();
         totalList.addAll(listA);
         totalList.addAll(listB);
-//		totalList.addAll(listC);
+		totalList.addAll(listC);
         totalList.addAll(listD);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
