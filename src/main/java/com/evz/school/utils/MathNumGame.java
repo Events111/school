@@ -123,11 +123,11 @@ public class MathNumGame {
 
             if (symbol.equals("-")) {
                 if (a - b >= 0) {
-                    list.add(a + " X " + b + " =  ");
+                    list.add(a + " × " + b + " =  ");
                     k++;
                 }
             } else {
-                if (a + b <= 20) {
+                if (a + b <= 20 && b !=0 ) {
                     list.add(a + " ÷ " + b + " =  ");
                     k++;
                 }
@@ -240,7 +240,7 @@ public class MathNumGame {
         totalList.addAll(listB);
 //		totalList.addAll(listC);
         totalList.addAll(listD);
-
+        System.out.println(g.print2File());
 //        g.print2File(totalList);
     }
 }
