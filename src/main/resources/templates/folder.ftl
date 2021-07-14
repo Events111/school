@@ -7,7 +7,7 @@
 <body>
 <h1>Light Share</h1>
 <#list fileList as file>
-    <a href="/download?file=${file}" target="_blank">${file}</a><br>
+    <a href="/v1/download?file=${file}" target="_blank">${file}</a><br>
 </#list>
 </body>
 </html>
