@@ -35,8 +35,9 @@ public class FolderController {
     public void download(String file, HttpServletResponse response) throws IOException {
         File dFile = new File(shareFolder, file);
         if (dFile.exists() && dFile.isFile()) {
-            response.setContentType("application/force-download");
-            response.setHeader("Content-Disposition", "attachment;filename=" + file);
+            response.setContentType("application/force-download;charset=utf-8");
+//            response.setHeader("Content-Disposition", "attachment;filename=" + file);
+            response.addHeader("Content-Disposition", "attachment;filename=" + new String(file.getBytes("utf-8"),"ISO8859-1"));
             byte[] buffer = new byte[102400];
             try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(dFile));
                  BufferedOutputStream bos = new BufferedOutputStream(response.getOutputStream())) {
