@@ -8,7 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
+/**
+ * 文件夹遍历
+ * 实现文件下载
+ * 固定配置文件夹
+ */
+
 @Controller
+@RequestMapping("/v1")
 public class FolderController {
 
     @Value("${shareFolder}")
@@ -16,7 +23,7 @@ public class FolderController {
 
     @RequestMapping("/folder")
     public ModelAndView index() {
-        ModelAndView mav = new ModelAndView("index");
+        ModelAndView mav = new ModelAndView("folder");
         File file = new File(shareFolder);
         if (file.exists() && file.isDirectory()) {
             mav.addObject("fileList", file.list());
